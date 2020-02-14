@@ -29,13 +29,16 @@
 #include <ArduinoOTA.h>
 
 
+#define MILLION 1000000
+
+
 
 /************ WIFI and MQTT Information (CHANGE THESE FOR YOUR SETUP) ******************/
-const char* ssid = "YourSSID"; //type your WIFI information inside the quotes
-const char* password = "YourWIFIpassword";
-const char* mqtt_server = "your.MQTT.server.ip";
-const char* mqtt_username = "yourMQTTusername";
-const char* mqtt_password = "yourMQTTpassword";
+const char* ssid = "ghabilev1"; //type your WIFI information inside the quotes
+const char* password = "ghabile5671v1";
+const char* mqtt_server = "192.168.0.100";
+const char* mqtt_username = "homeassistant";
+const char* mqtt_password = "dustin";
 const int mqtt_port = 1883;
 
 
@@ -48,8 +51,8 @@ int OTAport = 8266;
 
 
 /************* MQTT TOPICS (change these topics as you wish)  **************************/
-const char* light_state_topic = "bruh/porch";
-const char* light_set_topic = "bruh/porch/set";
+const char* light_state_topic = "home/rgbsmall";
+const char* light_set_topic = "home/rgbsmall/set";
 
 const char* on_cmd = "ON";
 const char* off_cmd = "OFF";
@@ -66,8 +69,8 @@ const int BUFFER_SIZE = JSON_OBJECT_SIZE(10);
 
 
 /*********************************** FastLED Defintions ********************************/
-#define NUM_LEDS    186
-#define DATA_PIN    5
+#define NUM_LEDS    12
+#define DATA_PIN    2
 //#define CLOCK_PIN 5
 #define CHIPSET     WS2811
 #define COLOR_ORDER BRG
